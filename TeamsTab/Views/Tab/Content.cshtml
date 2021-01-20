@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Content Page";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This is the Content Page for the Teams App</p>
+<button onclick="showContextInfo()">show context info</button>
+<button onclick="showMeetingDetails()">show meeting details</button>
+
+<script type="text/javascript">
+    function showContextInfo() {
+        microsoftTeams.initialize();
+
+        microsoftTeams.getContext(function (context) {
+            var teamName = context.teamName;
+            alert("Team Name: " + teamName + "\n" +
+                "Team ID: " + context.teamId + "\n" +
+                "Channel ID: " + context.channelId + "\n" +
+                "Chat ID: " + context.chatId + "\n" +
+                "Session ID: " + context.sessionId + "\n" +
+                "Channel Name: " + context.channelName + "\n" +
+                "Locale: " + context.locale + "\n" +
+                "Entity ID:" + context.entityId + "\n" +
+                "User Principal Name: " + context.userPrincipalName + "\n" +
+                "T ID: " + context.tid + "\n" +
+                "Group ID: " + context.groupId + "\n" +
+                "Theme: " + context.theme + "\n" +
+                "Is Full Screen: " + context.isFullScreen + "\n" +
+                "Team Type: " + context.teamType + "\n" +
+                "User Team Role: " + context.userTeamRole + "\n" +
+                "Host Client Type: " + context.hostClientType + "\n" +
+                "Frame Context: " + context.frameContext + "\n" +
+                "Meeting ID:" + context.meetingId);
+        });
+    }
+
+    function showMeetingDetails() {
+        alert("show meeting details button clicked");
+        microsoftTeams.initialize();
+
+        var members = microsoftTeams.getChatMembers();
+        alert(members);
+    }
+</script>

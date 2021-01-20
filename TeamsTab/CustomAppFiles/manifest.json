@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
+  "version": "1.0.0",
+  "id": "5117b2bc-9984-4d6a-b38f-58af3a9bccf5",
+  "packageName": "com.theagon",
+  "developer": {
+    "name": "planatir",
+    "websiteUrl": "https://www.website.com",
+    "privacyUrl": "https://www.website.com/privacy",
+    "termsOfUseUrl": "https://www.website.com/termsOfUse"
+  },
+  "icons": {
+    "color": "icon-color.png",
+    "outline": "icon-outline.png"
+  },
+  "name": {
+    "short": "Project Planatir short name",
+    "full": "Project Planatir full name"
+  },
+  "description": {
+    "short": "Project Planatir short description",
+    "full": "Project Planatir full description"
+  },
+  "accentColor": "#FFFFFF",
+  "configurableTabs": [
+    {
+      "configurationUrl": "<REPLACE THIS WITH YOUR LOCAL TUNNEL ADDRESS, eg https://2d9ee7096e08.ngrok.io>/Tab/Configuration",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
+      "context": [
+        "channelTab",
+        "privateChatTab",
+        "meetingStage",
+        "meetingSidePanel",
+        "meetingDetailsTab",
+        "meetingChatTab"
+      ],
+      "supportedSharePointHosts": [
+        "sharePointFullPage"
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "8ddddc942faf.ngrok.io"
+  ]
+}

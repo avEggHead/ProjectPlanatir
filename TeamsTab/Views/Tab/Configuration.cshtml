@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "ConfigurationTab";
+}
+
+<h1>ConfigurationTab</h1>
+
+<button onclick="initializeTeamSettings()">initialize team settings</button>
+
+<script>
+    function initializeTeamSettings() {
+        microsoftTeams.initialize();
+        microsoftTeams.settings.setValidityState(true);
+        microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: "<REPLACE THIS WITH YOUR LOCAL TUNNEL ADDRESS, eg https://2d9ee7096e08.ngrok.io>",
+                contentUrl: "<REPLACE THIS WITH YOUR LOCAL TUNNEL ADDRESS, eg https://2d9ee7096e08.ngrok.io>/Tab/Content",
+                entityId: "contentTab",
+                suggestedDisplayName: "Content"
+            });
+            saveEvent.notifySuccess();
+        });
+    }
+</script>
