@@ -1,5 +1,5 @@
-# ProjectPlanatir
-A Repository for code and a place to host a kanban board related to Project Planatir.
+# Project Planatir
+The goal is to create a collaboration tool that facilitates mob programming in Microsoft Teams.  Click the Projects tab to see the Kanban board.
 
 # Setup for Local hosting:
 1. Establish a tunnel to the locally hosted web app. 
